@@ -23,7 +23,7 @@ while True:
 	
 	if li_lenght != 11: 
 		pass
-	else:	
+	else:	 
 		signal_strength = li[0] 
 		attention = li[1]  
 		meditation = li[2]
@@ -35,7 +35,12 @@ while True:
 		high_beta = li[8]
 		low_gamma = li[9]
 		high_gamma = li[10]
-		print("Attention Level {}".format(attention))
+
+		if int(signal_strength) < 50:
+			print("Attention Level {}".format(attention))
+		else:
+			print("The signal is too weak to obtain good values")
+			print("Signal strength : {}\n".format(signal_strength))
 
 
 
